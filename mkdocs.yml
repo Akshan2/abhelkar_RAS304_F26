@@ -1,6 +1,6 @@
 site_name: RAS 304 Data Sheet Template
 site_url: https://ras-embedded-systems.github.io/RAS304DataSheetTemplate/
-repo_url: https://github.com/ras-embedded-systems/RAS304DataSheetTemplate
+repo_url: https://github.com/akshan2/abhelkar_RAS304_F26
 edit_uri: edit/main/docs/
 theme:
   name: material
