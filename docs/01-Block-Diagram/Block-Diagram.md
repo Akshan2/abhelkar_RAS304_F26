@@ -1,7 +1,7 @@
 # Individual Block Diagram
 
 ## Overview
-The purpose of this individual block diagram is to document the hardware architecture, electrical interfaces, and signal flow for the Servo Motor Subsystem of Team's Modular Spider Leg.
+The purpose of this individual block diagram is to showcse the hardware architecture, electrical interfaces, and signal flow for the Servo Motor Subsystem of Team's Modular Spider Leg.
 
 Key system parameters:
 * **Power Source & Levels:** The board is powered by an external 9V DC wall adapter, which is stepped down via a linear regulator (LM7805) to a regulated 5V DC supply. This 5V domain powers the servo motor and the microcontroller.
