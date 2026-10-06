@@ -11,6 +11,6 @@ Key system parameters include[cite: 17]:
 
 ## Subsystem Block Diagram
 
-![Akshan Bhelkar - Servo Motor Block Diagram](Akshan_block_diagram.png)
+![Akshan Bhelkar - Servo Motor Block Diagram](Akshan_Block_Diagram.png)
 
 **Figure 1:** Hardware block diagram detailing the power distribution and hub connections for the Servo Motor Subsystem.
