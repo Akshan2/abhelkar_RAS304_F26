@@ -32,7 +32,7 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
 2. NEMA 17 bipolar stepper (17HS15-1704S) with DRV8825 stepper driver carrier
 
-    ![](NEMA-17.jpg)
+    ![](NEMA-17.png)
 
     * Motor: $3.76/each (sale price; list price $4.70)
     * [17HS4023S Stepper motor product page at Amazon](https://a.co/d/0dAFWEmr)
@@ -41,8 +41,8 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
     ![](DRV8825.jpg)
 
     * Driver: **TODO: $X.XX/each**
-    * [DRV8825 driver carrier product page at Pololu](https://www.pololu.com/product-info-merged/2982)
-    * [DRV8825 datasheet (Texas Instruments)](https://ti.com/document-viewer/drv8825/datasheet)
+    * [DRV8825 driver carrier product page at Pololu](https://www.pololu.com/product/2133)
+    * [DRV8825 datasheet (Texas Instruments)](https://www.ti.com/lit/ds/symlink/drv8825.pdf)
 
     | Pros | Cons |
     | ---- | ---- |
