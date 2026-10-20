@@ -1015,24 +1015,16 @@
 </thead>
 <tbody>
 <tr>
-<td>The I2C version needs only four wires (VCC, GND, SDA, SCL), which uses very few Nano pins.</td>
-<td>The listing must provide a datasheet or detailed specifications, and the module's board layout (pin order, on-board regulator) can vary between sellers, so the listing must be checked before wiring.</td>
+<td>Large 2.42-inch, 128×64 display provides clear text and enough space for angles, status, and fault messages.</td>
+<td>The SSD1309 controller requires a compatible library and may not work correctly with every SSD1306 example.</td>
 </tr>
 <tr>
-<td>The panel emits its own light, giving high contrast with no backlight, and current draw is tens of mA depending on how many pixels are lit.</td>
-<td>OLED pixels dim with age and burn in if the same content is shown for thousands of hours, so the screen should be turned off when idle.</td>
+<td>Uses only four I²C connections: VCC, GND, SDA, and SCL.</td>
+<td>It is larger and more expensive than common 0.96-inch OLED modules.</td>
 </tr>
 <tr>
-<td>128×64 pixels shows several lines of status (commanded angle, measured status, fault flags) or a simple graphic.</td>
-<td>The Adafruit_SSD1306 library keeps a 1 KB frame buffer, half of the Nano's 2 KB SRAM, so the U8g2 library in page-buffer mode (about 128 bytes) should be used instead.</td>
-</tr>
-<tr>
-<td>U8g2 supports software I2C on any two digital pins, so the display can avoid the hardware I2C pins (A4/A5) used for the command bus to the Main Nano.</td>
-<td>At 0.96" diagonal the text is small, which limits readability from a distance.</td>
-</tr>
-<tr>
-<td>It is the most inexpensive way to get a graphic display, and both U8g2 and Adafruit_SSD1306 are well documented.</td>
-<td>Software I2C is slower than hardware I2C, although this is not a problem for a status screen.</td>
+<td>Supports 3–5 V power and provides bright, high-contrast graphics without a backlight.</td>
+<td>Static images displayed for long periods can cause pixel dimming or burn in.</td>
 </tr>
 </tbody>
 </table>
@@ -1074,8 +1066,8 @@
 </table>
 </li>
 </ol>
-<p><strong>Choice:</strong> Option 1: 0.96" 128×64 SSD1306 OLED module</p>
-<p><strong>Reason:</strong> The OLED can show multiple lines of leg status (commanded angle, measured status, fault flags) and simple graphics, which the 16×2 LCD cannot. It needs only two signal pins, whereas the LCD needs six. Using the U8g2 library in page-buffer mode on software I2C (pins D4/D5) solves two Nano problems at once: it keeps only about 128 bytes of RAM in use, and it leaves the hardware I2C pins (A4/A5) free as the command bus to the Main Nano. The Adafruit module (Option 2) is the same panel at a higher price, so it is kept as the fallback if the Amazon listing does not provide a datasheet. <strong>TODO: confirm the Amazon listing includes a datasheet or detailed specifications.</strong></p>
+<p><strong>Choice:</strong> Option 1: 2.42 inches 128x64 IIC I2C OLED Display Module</p>
+<p><strong>Reason:</strong> The OLED can show multiple lines of leg status (commanded angle, measured status, fault flags) and simple graphics, which the 16×2 LCD cannot. It needs only two signal pins, whereas the LCD needs six. Using the U8g2 library in page buffer mode on software I2C (pins D4/D5) solves two Nano problems at once: it keeps only about 128 bytes of RAM in use, and it leaves the hardware I2C pins (A4/A5) free as the command bus to the Main Nano.</p>
 <hr>
 <p><strong>Pin Table (draft, Driver Nano 1)</strong></p>
 <table>
