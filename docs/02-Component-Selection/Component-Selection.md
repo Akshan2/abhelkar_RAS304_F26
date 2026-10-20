@@ -93,7 +93,7 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
 ---
 
-**Pin Table (draft, Driver Nano 1)**
+**Pin Table (Potential Pin Connection Plan, Driver Nano 1)**
 
 | Nano pin | Function | Connects to |
 | -------- | -------- | ----------- |
