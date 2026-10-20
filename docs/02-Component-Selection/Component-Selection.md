@@ -57,13 +57,13 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
 **Diagnostic Display (leg status)**
 
-1. 0.96" 128×64 monochrome OLED module, SSD1306 controller (Amazon listing)
+1. 2.42 inches 128x64 IIC I2C OLED Display Module (Amazon)
 
-    ![](OLED-amazon.jpg)
+    ![](OLED.jpg)
 
-    * **TODO: $X.XX/each (copy from the listing)**
-    * [0.96" SSD1306 OLED module on Amazon](https://a.co/d/06kDryth)
-    * **TODO: add a link to the SSD1306 controller datasheet or the datasheet in the listing (required for Amazon parts).**
+    * Price: $15.59
+    * [ 2.42 Inches I2C OLED Display Module on Amazon](https://a.co/d/0i3j9NDr)
+    * [Oled Display Datasheet](https://manuals.plus/asin/B0G2RFLG1L.pdf)
 
     | Pros | Cons |
     | ---- | ---- |
@@ -73,27 +73,14 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
     | U8g2 supports software I2C on any two digital pins, so the display can avoid the hardware I2C pins (A4/A5) used for the command bus to the Main Nano. | At 0.96" diagonal the text is small, which limits readability from a distance. |
     | It is the most inexpensive way to get a graphic display, and both U8g2 and Adafruit_SSD1306 are well documented. | Software I2C is slower than hardware I2C, although this is not a problem for a status screen. |
 
-2. Adafruit 0.96" 128×64 monochrome OLED, STEMMA QT (ADA326)
+2. Adafruit Standard 16×2 character LCD
 
-    ![](ADA326.jpg)
+    ![](DISPLAY-16X2.jpg)
 
-    * $17.50/each (quantity 1–9)
-    * [Adafruit 0.96" OLED (ADA326) product page](https://www.adafruit.com/products/326)
-    * [Adafruit monochrome OLED datasheets and design files](https://learn.adafruit.com/monochrome-oled-breakouts/downloads)
-
-    | Pros | Cons |
-    | ---- | ---- |
-    | Adafruit publishes datasheets, EagleCAD PCB files, and a full tutorial, which satisfies the course datasheet requirement without extra searching. | It costs $17.50, which is more than a generic module with the same SSD1306 panel. |
-    | The revised board has auto-reset circuitry, so the RESET pin is not needed, and I2C is the default configuration. | The pins are not pre-soldered for breadboard use: it needs a STEMMA QT cable or soldered headers. |
-    | The STEMMA QT connectors allow plug-in wiring without soldering. | It has the same 1 KB frame-buffer cost as other SSD1306 modules when using the Adafruit library. |
-    | Adafruit's library and tutorial are the reference implementation for the SSD1306. | It is the same panel as Option 1, so it adds no display capability. |
-
-3. Adafruit Standard 16×2 character LCD, HD44780, white on blue (ADA181)
-
-    ![](ADA181.jpg)
-
-    * **TODO: $X.XX/each**
+    * Price: $9.95
     * [Adafruit Standard LCD 16×2 (ADA181) product page](https://www.adafruit.com/product/181)
+    * [Adafruit Standard LCD 16×2 Display Code Datasheet-1](https://cdn-shop.adafruit.com/datasheets/HD44780.pdf)
+    * [Adafruit Standard LCD 16×2 Display Wiring Datasheet](https://cdn-shop.adafruit.com/product-files/181/p181.pdf)
 
     | Pros | Cons |
     | ---- | ---- |
