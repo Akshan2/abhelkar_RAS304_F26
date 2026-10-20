@@ -67,12 +67,10 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
     | Pros | Cons |
     | ---- | ---- |
-    | The I2C version needs only four wires (VCC, GND, SDA, SCL), which uses very few Nano pins. | The listing must provide a datasheet or detailed specifications, and the module's board layout (pin order, on-board regulator) can vary between sellers, so the listing must be checked before wiring. |
-    | The panel emits its own light, giving high contrast with no backlight, and current draw is tens of mA depending on how many pixels are lit. | OLED pixels dim with age and burn in if the same content is shown for thousands of hours, so the screen should be turned off when idle. |
-    | 128×64 pixels shows several lines of status (commanded angle, measured status, fault flags) or a simple graphic. | The Adafruit_SSD1306 library keeps a 1 KB frame buffer, half of the Nano's 2 KB SRAM, so the U8g2 library in page-buffer mode (about 128 bytes) should be used instead. |
-    | U8g2 supports software I2C on any two digital pins, so the display can avoid the hardware I2C pins (A4/A5) used for the command bus to the Main Nano. | At 0.96" diagonal the text is small, which limits readability from a distance. |
-    | It is the most inexpensive way to get a graphic display, and both U8g2 and Adafruit_SSD1306 are well documented. | Software I2C is slower than hardware I2C, although this is not a problem for a status screen. |
-
+    | Large 2.42-inch, 128×64 display provides clear text and enough space for angles, status, and fault messages. | The SSD1309 controller requires a compatible library and may not work correctly with every SSD1306 example.|
+    | Uses only four I²C connections: VCC, GND, SDA, and SCL. | It is larger and more expensive than common 0.96-inch OLED modules. |
+    | Supports 3–5 V power and provides bright, high-contrast graphics without a backlight. | Static images displayed for long periods can cause pixel dimming or burn in. |
+   
 2. Adafruit Standard 16×2 character LCD
 
     ![](DISPLAY-16X2.jpg)
@@ -89,9 +87,9 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
     | The LiquidCrystal library ships with the Arduino IDE and uses very little RAM, so it avoids the OLED frame-buffer issue. | A contrast potentiometer and backlight resistor are needed, and the backlight draws current continuously. |
     | The blue LED backlight can be dimmed with a resistor or PWM and uses much less power than EL backlights. | The module is physically larger than the OLED. |
 
-**Choice:** Option 1: 0.96" 128×64 SSD1306 OLED module
+**Choice:** Option 1: 2.42 inches 128x64 IIC I2C OLED Display Module
 
-**Reason:** The OLED can show multiple lines of leg status (commanded angle, measured status, fault flags) and simple graphics, which the 16×2 LCD cannot. It needs only two signal pins, whereas the LCD needs six. Using the U8g2 library in page-buffer mode on software I2C (pins D4/D5) solves two Nano problems at once: it keeps only about 128 bytes of RAM in use, and it leaves the hardware I2C pins (A4/A5) free as the command bus to the Main Nano. The Adafruit module (Option 2) is the same panel at a higher price, so it is kept as the fallback if the Amazon listing does not provide a datasheet. **TODO: confirm the Amazon listing includes a datasheet or detailed specifications.**
+**Reason:** The OLED can show multiple lines of leg status (commanded angle, measured status, fault flags) and simple graphics, which the 16×2 LCD cannot. It needs only two signal pins, whereas the LCD needs six. Using the U8g2 library in page buffer mode on software I2C (pins D4/D5) solves two Nano problems at once: it keeps only about 128 bytes of RAM in use, and it leaves the hardware I2C pins (A4/A5) free as the command bus to the Main Nano.
 
 ---
 
