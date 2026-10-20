@@ -32,11 +32,11 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
 2. NEMA 17 bipolar stepper (17HS15-1704S) with DRV8825 stepper driver carrier
 
-    ![](17HS15-1704S-1-800x800.jpg)
+    ![](NEMA-17.jpg)
 
     * Motor: $3.76/each (sale price; list price $4.70)
-    * [17HS15-1704S motor product page at Amazon](https://www.omc-stepperonline.com/nema-17-bipolar-42ncm-59-48oz-in-1-7a-42x42x37-5mm-4-wires-w-1m-cable-connector-17hs15-1704s)
-    * [17HS15-1704S full datasheet](https://files.omc-stepperonline.com/17HS15-1704S_Full_Datasheet.pdf)
+    * [17HS4023S Stepper motor product page at Amazon](https://a.co/d/0dAFWEmr)
+    * [17HS15-1704S full datasheet](https://www.laskakit.cz/user/related_files/73231_1624__ps_1199sm-17hs4023-etc.pdf)
 
     ![](DRV8825.jpg)
 
@@ -53,9 +53,9 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
     | The DRV8825 has built-in over-current protection, thermal shutdown, undervoltage lockout, and an adjustable current limit. | Torque falls with speed, the motor can resonate, and the coils draw current continuously while holding, which wastes power and creates heat. |
     | | Two parts must be bought and wired (STEP, DIR, ENABLE, power, and four motor wires), and the current-limit potentiometer must be set before connecting the motor. |
 
-3. SG92R micro servo
+3. MG90S micro servo
 
-    ![](SG92R.jpg)
+    ![](MG90S.jpg)
 
     * **TODO: $X.XX/each**
     * [SG92R product page at ProtoSupplies](https://protosupplies.com/product/servo-motor-micro-sg92r/)
