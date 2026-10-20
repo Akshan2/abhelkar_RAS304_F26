@@ -51,7 +51,7 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
 **Choice:** Option 1: Hitec HS-485HB standard servo
 
-**Rationale:** The HS-485HB is the best match for the Driver Nano 1 architecture. Its internal closed-loop position control means the Nano only needs one PWM pin and the standard Servo library, and it runs from the same 4.8–6 V supply as the rest of the subsystem. The stepper option (Option 2) is the most inexpensive motor, but the DRV8825 needs at least 8.2 V, which forces a second power rail and regulator, and the 280 g motor is about six times heavier than the servo for similar torque. 
+**Reason:** The HS-485HB is the best match for the Driver Nano 1 architecture. Its internal closed-loop position control means the Nano only needs one PWM pin and the standard Servo library, and it runs from the same 4.8–6 V supply as the rest of the subsystem. The stepper option (Option 2) is the most inexpensive motor, but the DRV8825 needs at least 8.2 V, which forces a second power rail and regulator, and the 280 g motor is about six times heavier than the servo for similar torque. 
 
 ---
 
@@ -79,7 +79,7 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
     * Price: $9.95
     * [Adafruit Standard LCD 16×2 (ADA181) product page](https://www.adafruit.com/product/181)
-    * [Adafruit Standard LCD 16×2 Display Code Datasheet-1](https://cdn-shop.adafruit.com/datasheets/HD44780.pdf)
+    * [Adafruit Standard LCD 16×2 Display Code Datasheet](https://cdn-shop.adafruit.com/datasheets/HD44780.pdf)
     * [Adafruit Standard LCD 16×2 Display Wiring Datasheet](https://cdn-shop.adafruit.com/product-files/181/p181.pdf)
 
     | Pros | Cons |
@@ -91,7 +91,7 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
 **Choice:** Option 1: 0.96" 128×64 SSD1306 OLED module
 
-**Rationale:** The OLED can show multiple lines of leg status (commanded angle, measured status, fault flags) and simple graphics, which the 16×2 LCD cannot. It needs only two signal pins, whereas the LCD needs six. Using the U8g2 library in page-buffer mode on software I2C (pins D4/D5) solves two Nano problems at once: it keeps only about 128 bytes of RAM in use, and it leaves the hardware I2C pins (A4/A5) free as the command bus to the Main Nano. The Adafruit module (Option 2) is the same panel at a higher price, so it is kept as the fallback if the Amazon listing does not provide a datasheet. **TODO: confirm the Amazon listing includes a datasheet or detailed specifications.**
+**Reason:** The OLED can show multiple lines of leg status (commanded angle, measured status, fault flags) and simple graphics, which the 16×2 LCD cannot. It needs only two signal pins, whereas the LCD needs six. Using the U8g2 library in page-buffer mode on software I2C (pins D4/D5) solves two Nano problems at once: it keeps only about 128 bytes of RAM in use, and it leaves the hardware I2C pins (A4/A5) free as the command bus to the Main Nano. The Adafruit module (Option 2) is the same panel at a higher price, so it is kept as the fallback if the Amazon listing does not provide a datasheet. **TODO: confirm the Amazon listing includes a datasheet or detailed specifications.**
 
 ---
 
@@ -106,5 +106,3 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 | A5 | Hardware I2C SCL (command/feedback bus) | Main Processor Nano |
 | 5V / GND | Logic power for the Nano and OLED | Regulated 5 V rail |
 | (external) | Servo power, 6 V rail, sized for 1.2 A stall | HS-485HB power wire, common ground with the Nano |
-
-If the stepper option is chosen instead: D2 = STEP, D3 = DIR, D6 = ENABLE, D7 = nFAULT (input), with the motor supply (8.2 V or higher) on the DRV8825 VMOT pin.
