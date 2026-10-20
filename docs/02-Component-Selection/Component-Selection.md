@@ -24,11 +24,9 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
     | Pros | Cons |
     | ---- | ---- |
-    | Position control is built in: the internal potentiometer and amplifier hold the commanded angle, so the Nano only outputs one 50 Hz PWM signal (Servo library, any digital pin) and no driver IC is needed. | Stall current is 1.0 A at 4.8 V and 1.2 A at 6 V per the datasheet, so the regulator and wiring must be sized for it, and the servo cannot be powered from the Nano's 5V pin or USB. |
+    | Position control is built in: the internal potentiometer holds the commanded angle, so the Nano only outputs one 50 Hz PWM signal (Servo library, any digital pin) and no driver IC is needed. | Stall current is 1.0 A at 4.8 V and 1.2 A at 6 V per the datasheet, so the regulator and wiring must be sized for it, and the servo cannot be powered from the Nano's 5V pin or USB. |
     | Stall torque of 4.8 kgf·cm at 4.8 V and 6.0 kgf·cm at 6 V in a 45 g package gives the highest torque per gram of the three options. | Karbonite (plastic) gears can strip under shock loads such as a leg strike, and metal-gear servos cost more. |
-    | Runs from the same 4.8–6 V range as the logic, so no second, higher-voltage supply is needed. | The servo gives no position output, so the Nano cannot confirm that the joint reached the angle. The status sent to the Main Nano is the commanded value, not a measured one. |
-    | The datasheet lists stall current, idle current (8–10 mA), speed (0.22 s/60° at 4.8 V), deadband, and dimensions, which makes the power budget straightforward. | Rotation is limited (about 90° with standard pulses and up to roughly 190° with wide pulses per ServoCity), so the hip range of motion must be checked against this. |
-    | Ball bearing and a standard 24-tooth spline allow common horns and brackets to attach to the leg structure. | Some retailers list the model as replaced by newer programmable servos and one distributor quotes a 3-week lead time, so stock must be confirmed before ordering. |
+    | It runs from the same 4.8–6 V range as the logic, and the manufacturer datasheet lists stall current, idle current, speed, and dimensions, which makes the power budget straightforward. | The servo gives no position output, so the Nano cannot confirm that the joint reached the angle. The status sent to the Main Nano is the commanded value, not a measured one. |
 
 2. NEMA 17 bipolar stepper (17HS15-1704S) with DRV8825 stepper driver carrier
 
@@ -40,36 +38,20 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
     ![](DRV8825.jpg)
 
-    * Driver: **TODO: $X.XX/each**
-    * [DRV8825 driver carrier product page at Pololu](https://www.pololu.com/product/2133)
+    * Driver: $15.95
+    * [DRV8825 driver product page at Pololu](https://www.pololu.com/product/2133)
     * [DRV8825 datasheet (Texas Instruments)](https://www.ti.com/lit/ds/symlink/drv8825.pdf)
 
     | Pros | Cons |
     | ---- | ---- |
-    | The motor is very inexpensive ($3.76) and has a downloadable datasheet with rated current (1.7 A), winding resistance (2.3 Ω), and inductance (4.0 mH). | The motor weighs 280 g, about six times the HS-485HB, for a similar holding torque (42 N·cm, about 4.3 kgf·cm), which adds mass to the shoulder assembly. |
-    | The DRV8825 provides up to 1/32 microstepping from a 1.8° step motor, so position resolution is much finer than a hobby servo with no feedback sensor. | The DRV8825 needs an 8.2–45 V motor supply, so it cannot run from the 5–6 V logic rail and adds a second power rail, regulator, and budget line. |
-    | The Nano only has to output STEP and DIR pulses (plus optional ENABLE and nFAULT), with no PWM timing constraints. | The motor's 1.7 A rating exceeds the carrier's roughly 1.5 A without a heat sink, so a heat sink or a lower current limit (and less torque) is needed. |
-    | The shaft holds position while the coils are energized and there is no gear train to strip, and rotation is not limited to 90–190°. | It is open loop: lost steps under overload go undetected, so the joint needs a homing switch at power-up. |
-    | The DRV8825 has built-in over-current protection, thermal shutdown, undervoltage lockout, and an adjustable current limit. | Torque falls with speed, the motor can resonate, and the coils draw current continuously while holding, which wastes power and creates heat. |
-    | | Two parts must be bought and wired (STEP, DIR, ENABLE, power, and four motor wires), and the current-limit potentiometer must be set before connecting the motor. |
+    | The motor's rated current of about 0.7 A per phase is well under the DRV8825 carrier's roughly 1.5 A limit without a heat sink, so no extra cooling is needed. | Holding torque is only about 14 N·cm (roughly 1.4 kgf·cm), about a third of the HS-485HB's 4.8 kgf·cm at 4.8 V, so a gearbox would likely be needed for a hip joint, adding cost, backlash, and mass. |
+    | The DRV8825 provides up to 1/32 microstepping from a 1.8° step motor, and the Nano only has to output STEP and DIR pulses with no PWM timing constraints. | The DRV8825 needs an 8.2–45 V motor supply (the motor is rated for 12 V), so it cannot run from the 5–6 V logic rail and adds a second power rail, regulator, and power budget line. |
+    | The shaft holds position while the coils are energized with no gear train to strip, and the DRV8825 adds over-current protection, thermal shutdown, and an adjustable current limit. | It is open loop with no position feedback, so lost steps go undetected and the joint needs a homing switch at power-up, and the coils draw current continuously while holding. |
 
-3. MG90S micro servo
-
-    ![](MG90S.jpg)
-
-    * **TODO: $X.XX/each**
-    * [SG92R product page at ProtoSupplies](https://protosupplies.com/product/servo-motor-micro-sg92r/)
-
-    | Pros | Cons |
-    | ---- | ---- |
-    | At about 9 g and roughly 22 × 12 × 27 mm it adds almost no mass to the leg. | Stall torque is quoted as 1.5 to 2.5 kgf·cm depending on the source, well below the 4.8–6.0 kgf·cm of the HS-485HB. |
-    | Measured stall current is around 650 mA with 100–300 mA while moving, which is lower than the HS-485HB. | Reseller specifications disagree with each other and there is no authoritative manufacturer datasheet, which conflicts with the course guidance on datasheets. |
-    | It is inexpensive and uses the same one-pin PWM interface and Servo library as the HS-485HB. | Plastic gears with no ball bearing wear quickly under load, and sustained stall can overheat the motor. |
-    | It runs from the 5 V rail with no extra driver or supply. | There is no position feedback, and the limited torque leaves little margin for a leg joint. |
 
 **Choice:** Option 1: Hitec HS-485HB standard servo
 
-**Rationale:** The HS-485HB is the best match for the Driver Nano 1 architecture. Its internal closed-loop position control means the Nano only needs one PWM pin and the standard Servo library, and it runs from the same 4.8–6 V supply as the rest of the subsystem. The stepper option (Option 2) is the most inexpensive motor, but the DRV8825 needs at least 8.2 V, which forces a second power rail and regulator, and the 280 g motor is about six times heavier than the servo for similar torque. The SG92R (Option 3) is lightest, but its torque is too low and its datasheet values are unreliable. The HS-485HB's 6.0 kgf·cm at 6 V gives a margin over the required torque calculated above (**TODO: state required torque and the resulting safety factor**). Its 1.2 A stall current at 6 V is the main cost, and the power budget and regulator selection are sized for it with the 25% margin, with the servo on its own regulated rail and not the Nano's 5V pin.
+**Rationale:** The HS-485HB is the best match for the Driver Nano 1 architecture. Its internal closed-loop position control means the Nano only needs one PWM pin and the standard Servo library, and it runs from the same 4.8–6 V supply as the rest of the subsystem. The stepper option (Option 2) is the most inexpensive motor, but the DRV8825 needs at least 8.2 V, which forces a second power rail and regulator, and the 280 g motor is about six times heavier than the servo for similar torque. 
 
 ---
 
