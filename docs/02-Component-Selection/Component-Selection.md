@@ -16,7 +16,7 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
 1. Hitec HS-485HB standard analog servo
 
-    ![](HS-485HB.jpg)
+    [](HS-485HB.jpg)
 
     * $28.99/each
     * [HS-485HB product page at Amzaon](https://a.co/d/0c83S3Ro)
@@ -30,7 +30,7 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
 2. NEMA 17 bipolar stepper (17HS15-1704S) with DRV8825 stepper driver carrier
 
-    ![](NEMA-17.png)
+    ![NEMA-17.png](NEMA-17.png)
 
     * Motor: $9.98
     * [17HS4023S Stepper motor product page at Amazon](https://a.co/d/0dAFWEmr)
