@@ -913,14 +913,13 @@
 
 
 <h1 id="driver-nano-1-servo-display">Driver Nano 1 (Servo + Display)</h1>
-<p>This page covers the components for <strong>Driver Nano 1</strong>: the hip-joint servo and the diagnostic display. Driver Nano 1 receives target positions from the Main Processor Nano over the command/feedback bus (I2C), drives the hip joint, shows leg status on the display, and reports status back.</p>
+<p>This page covers the components for <strong>Driver Nano 1</strong>: the joint-1 servo and the diagnostic display. Driver Nano 1 receives target positions from the Main Processor Nano over the I2C, drives the joint, shows leg status on the display, and reports status back.</p>
 <p><strong>Selection criteria used for both components</strong></p>
 <ul>
-<li>Runs from the 5 V logic domain used by the Nano, with as few extra supply rails as possible.</li>
-<li>Has a manufacturer or distributor datasheet (required by the course).</li>
-<li>Uses few Nano pins and little RAM (ATmega328P: 2 KB SRAM, 32 KB flash).</li>
+<li>Runs from the 5 V logic domain used by the Nano.</li>
+<li>Has a manufacturer or available datasheet.</li>
+<li>Uses few Nano pins and little RAM.</li>
 <li>Does not use the Nano's hardware I2C pins (A4/A5), which are reserved for the command bus to the Main Nano.</li>
-<li>Hip joint torque requirement: <strong>TODO: required torque = m × g × L × 2 (safety factor), where m = leg mass beyond the hip, L = distance from the hip axis to the center of mass. Insert your numbers here.</strong></li>
 </ul>
 <hr>
 <p><strong>Hip Joint Servo (Rotary Actuator)</strong></p>
@@ -930,7 +929,7 @@
 <p></p>
 <ul>
 <li>$28.99/each</li>
-<li><a href="https://www.servocity.com/hs-485hb-servo">HS-485HB product page at ServoCity</a></li>
+<li><a href="https://a.co/d/0c83S3Ro">HS-485HB product page at Amzaon</a></li>
 <li><a href="https://media.digikey.com/pdf/Data%20Sheets/Hi-Tech/HS-485HB.pdf">HS-485HB manufacturer datasheet</a></li>
 </ul>
 <table>
@@ -969,7 +968,7 @@
 <p></p>
 <ul>
 <li>Motor: $3.76/each (sale price; list price $4.70)</li>
-<li><a href="https://www.omc-stepperonline.com/nema-17-bipolar-42ncm-59-48oz-in-1-7a-42x42x37-5mm-4-wires-w-1m-cable-connector-17hs15-1704s">17HS15-1704S motor product page at StepperOnline</a></li>
+<li><a href="https://www.omc-stepperonline.com/nema-17-bipolar-42ncm-59-48oz-in-1-7a-42x42x37-5mm-4-wires-w-1m-cable-connector-17hs15-1704s">17HS15-1704S motor product page at Amazon</a></li>
 <li><a href="https://files.omc-stepperonline.com/17HS15-1704S_Full_Datasheet.pdf">17HS15-1704S full datasheet</a></li>
 </ul>
 <p></p>
