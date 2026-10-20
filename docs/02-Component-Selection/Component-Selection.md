@@ -34,7 +34,7 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
     ![](NEMA-17.png)
 
-    * Motor: $3.76/each (sale price; list price $4.70)
+    * Motor: $9.98
     * [17HS4023S Stepper motor product page at Amazon](https://a.co/d/0dAFWEmr)
     * [17HS15-1704S full datasheet](https://www.laskakit.cz/user/related_files/73231_1624__ps_1199sm-17hs4023-etc.pdf)
 
