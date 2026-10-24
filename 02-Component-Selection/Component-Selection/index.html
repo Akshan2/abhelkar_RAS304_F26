@@ -1073,49 +1073,132 @@
 <table>
 <thead>
 <tr>
-<th>Nano pin</th>
+<th>PIC pin</th>
 <th>Function</th>
 <th>Connects to</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>D9</td>
-<td>Servo signal (50 Hz PWM, Servo library)</td>
-<td>HS-485HB signal wire</td>
+<td>RC2</td>
+<td>7</td>
+<td>Servo PWM output</td>
 </tr>
 <tr>
-<td>D4</td>
-<td>OLED SDA (software I2C, U8g2)</td>
-<td>OLED SDA</td>
+<td>RB2</td>
+<td>9</td>
+<td>I2C SDA</td>
 </tr>
 <tr>
-<td>D5</td>
-<td>OLED SCL (software I2C, U8g2)</td>
-<td>OLED SCL</td>
+<td>RB1</td>
+<td>10</td>
+<td>I2C SCL</td>
 </tr>
 <tr>
-<td>A4</td>
-<td>Hardware I2C SDA (command/feedback bus)</td>
-<td>Main Processor Nano</td>
+<td>RC4</td>
+<td>11</td>
+<td>Spare GPIO</td>
 </tr>
 <tr>
-<td>A5</td>
-<td>Hardware I2C SCL (command/feedback bus)</td>
-<td>Main Processor Nano</td>
+<td>RC5</td>
+<td>12</td>
+<td>Spare GPIO</td>
 </tr>
 <tr>
-<td>5V / GND</td>
-<td>Logic power for the Nano and OLED</td>
-<td>Regulated 5 V rail</td>
+<td>RF0</td>
+<td>25</td>
+<td>UART TX</td>
 </tr>
 <tr>
-<td>(external)</td>
-<td>Servo power, 6 V rail, sized for 1.2 A stall</td>
-<td>HS-485HB power wire, common ground with the Nano</td>
+<td>RF1</td>
+<td>26</td>
+<td>UART RX</td>
+</tr>
+<tr>
+<td>RF4</td>
+<td>34</td>
+<td>Debug LED output</td>
+</tr>
+<tr>
+<td>RF7</td>
+<td>37</td>
+<td>Debug push-button input</td>
+</tr>
+<tr>
+<td>VTG</td>
+<td>51</td>
+<td>Board power input</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Peripheral Connector Wiring</strong></p>
+<table>
+<thead>
+<tr>
+<th>Connector</th>
+<th style="text-align: right;">Pin</th>
+<th>Connection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J2 Servo</td>
+<td style="text-align: right;">1</td>
+<td>Servo PWM signal from RC2 through R1</td>
+</tr>
+<tr>
+<td>J2 Servo</td>
+<td style="text-align: right;">2</td>
+<td>+5V_SERVO from JP1</td>
+</tr>
+<tr>
+<td>J2 Servo</td>
+<td style="text-align: right;">3</td>
+<td>Earth</td>
+</tr>
+<tr>
+<td>J3 OLED</td>
+<td style="text-align: right;">1</td>
+<td>Earth</td>
+</tr>
+<tr>
+<td>J3 OLED</td>
+<td style="text-align: right;">2</td>
+<td>Main +5 V</td>
+</tr>
+<tr>
+<td>J3 OLED</td>
+<td style="text-align: right;">3</td>
+<td>I2C SCL from RB1</td>
+</tr>
+<tr>
+<td>J3 OLED</td>
+<td style="text-align: right;">4</td>
+<td>I2C SDA from RB2</td>
+</tr>
+<tr>
+<td>J5 Expansion</td>
+<td style="text-align: right;">1</td>
+<td>Earth</td>
+</tr>
+<tr>
+<td>J5 Expansion</td>
+<td style="text-align: right;">2</td>
+<td>RC5</td>
+</tr>
+<tr>
+<td>J5 Expansion</td>
+<td style="text-align: right;">3</td>
+<td>RC4</td>
+</tr>
+<tr>
+<td>J5 Expansion</td>
+<td style="text-align: right;">4</td>
+<td>Main +5 V</td>
+</tr>
+</tbody>
+</table>
+<p>The HS-485HB servo is powered by a separate LM7805 regulator. Jumper-1 allows the servo supply to be disconnected during testing. The OLED and PIC development board use the main regulated +5 V supply. All other pins have a common Earth connection.</p>
 
 
 
