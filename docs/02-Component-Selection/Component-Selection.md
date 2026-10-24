@@ -95,12 +95,33 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
 **Pin Table (Potential Pin Connection Plan, Driver Nano 1)**
 
-| Nano pin | Function | Connects to |
+| PIC pin | Function | Connects to |
 | -------- | -------- | ----------- |
-| D9 | Servo signal (50 Hz PWM, Servo library) | HS-485HB signal wire |
-| D4 | OLED SDA (software I2C, U8g2) | OLED SDA |
-| D5 | OLED SCL (software I2C, U8g2) | OLED SCL |
-| A4 | Hardware I2C SDA (command/feedback bus) | Main Processor Nano |
-| A5 | Hardware I2C SCL (command/feedback bus) | Main Processor Nano |
-| 5V / GND | Logic power for the Nano and OLED | Regulated 5 V rail |
-| (external) | Servo power, 6 V rail, sized for 1.2 A stall | HS-485HB power wire, common ground with the Nano |
+| RC2 | 7 | Servo PWM output | R1 (220 Ω) → J2 pin 1, HS-485HB signal |
+| RB2 | 9 | I2C SDA | J3 pin 4, OLED SDA |
+| RB1 | 10 | I2C SCL | J3 pin 3, OLED SCL |
+| RC4 | 11 | Spare GPIO | J5 pin 3 |
+| RC5 | 12 | Spare GPIO | J5 pin 2 |
+| RF0 | 25 | UART TX | J4 pin 2 |
+| RF1 | 26 | UART RX | J4 pin 1 |
+| RF4 | 34 | Debug LED output | 330 Ω → LED-D1 → Earth |
+| RF7 | 37 | Debug push-button input | SW1 with 10 kΩ pull up and 1 µF capacitor|
+| VTG | 51 | Board power input | Main regulated +5 V rail |
+
+**Peripheral Connector Wiring**
+
+| Connector | Pin | Connection |
+|---|---:|---|
+| J2 Servo | 1 | Servo PWM signal from RC2 through R1 |
+| J2 Servo | 2 | +5V_SERVO from JP1 |
+| J2 Servo | 3 | Earth |
+| J3 OLED | 1 | Earth |
+| J3 OLED | 2 | Main +5 V |
+| J3 OLED | 3 | I2C SCL from RB1 |
+| J3 OLED | 4 | I2C SDA from RB2 |
+| J5 Expansion | 1 | Earth |
+| J5 Expansion | 2 | RC5 |
+| J5 Expansion | 3 | RC4 |
+| J5 Expansion | 4 | Main +5 V |
+
+The HS-485HB servo is powered by a separate LM7805 regulator. Jumper-1 allows the servo supply to be disconnected during testing. The OLED and PIC development board use the main regulated +5 V supply. All other pins have a common Earth connection.
