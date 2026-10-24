@@ -16,7 +16,7 @@ This page covers the components for **Driver Nano 1**: the joint-1 servo and the
 
 1. Hitec HS-485HB standard analog servo
 
-    ![](NEMA-17.png)
+    ![](HS-485HB.jpg)
 
     * $28.99/each
     * [HS-485HB product page at Amzaon](https://a.co/d/0c83S3Ro)
