@@ -4,11 +4,11 @@ title: Schematic
 
 ## Overview
 
-This schematic is design to support .... (highlight functionally, power, and controller).
+This schematic is design for the individual subsystem part of the team's Spider Leg Portion.
 
 
 ![schematic](Screenshot.png){style width:"350" height:"300;"}
-**Figure ##:** Showing a example schematic.
+**Figure ##:** Schematic of my subsystem of the group project.
 
 
 ## Resouces
