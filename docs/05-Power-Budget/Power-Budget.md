@@ -4,7 +4,7 @@ title: Power Budget
 
 ## Overview
 
-![budget1](pic1.png){style width:"350" height:"300;"}
+![budget1](pic1.png)
 
 ![budget2](pic2.png){style width:"350" height:"300;"}
 
