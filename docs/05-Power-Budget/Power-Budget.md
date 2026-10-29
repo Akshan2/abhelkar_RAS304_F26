@@ -6,9 +6,9 @@ title: Power Budget
 
 ![budget1](pic1.png)
 
-![budget2](pic2.png){style width:"350" height:"300;"}
+![budget2](pic2.png)
 
-![budget3](pic3.png){style width:"350" height:"300;"}
+![budget3](pic3.png)
 
 ## Conclusions
 
