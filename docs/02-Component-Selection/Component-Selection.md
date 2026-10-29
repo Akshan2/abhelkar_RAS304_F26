@@ -1,13 +1,13 @@
 # Driver Nano 1 (Servo + Display)
 
-This page covers the components for **Driver Nano 1**: the joint-1 servo and the diagnostic display. Driver Nano 1 receives target positions from the Main Processor Nano over the I2C, drives the joint, shows leg status on the display, and reports status back.
+This page covers the components for **Driver Nano 1**: the joint-1 servo and the diagnostic display. Driver 1 receives target positions from the Main Processor PIC, drives the joint, shows leg status on the display, and reports status back.
 
 **Selection criteria used for both components**
 
-* Runs from the 5 V logic domain used by the Nano.
+* Runs on 5V.
 * Has a manufacturer or available datasheet.
-* Uses few Nano pins and little RAM.
-* Does not use the Nano's hardware I2C pins (A4/A5), which are reserved for the command bus to the Main Nano.
+* Uses few pins and easy to integrate.
+
   
 
 ---
