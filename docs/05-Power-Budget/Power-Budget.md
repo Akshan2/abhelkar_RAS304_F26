@@ -3,20 +3,17 @@ title: Power Budget
 ---
 
 ## Overview
-Write a overview of what you did and why you did a Power Budget.
 
-> Capture your power budge as a image to display. Take time to get clean breaks and a well organized layout.
+![budget1](pic1.png){style width:"350" height:"300;"}
 
-![budget1](budgetPg1.png){style width:"350" height:"300;"}
+![budget2](pic2.png){style width:"350" height:"300;"}
 
-![budget2](budgetPg2.png){style width:"350" height:"300;"}
-
-![budget3](budgetPg3.png){style width:"350" height:"300;"}
+![budget3](pic3.png){style width:"350" height:"300;"}
 
 ## Conclusions
 
-From the prepare Power Budget, .....
-+
+The HS-485HB worst case stall current is 1,200 mA. With a 25% safety margin, the servo rail requires 1,500 mA, equal to the assumed LM7805 maximum rating.						
+
 
 ## Resouces
 
