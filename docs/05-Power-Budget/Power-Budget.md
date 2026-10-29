@@ -16,7 +16,9 @@ Write a overview of what you did and why you did a Power Budget.
 ## Conclusions
 
 From the prepare Power Budget, .....
++
 
 ## Resouces
 
-The power budget as a PDF download is available [*here*](PowerBudgetExample.pdf), and a Microsoft Excel Sheet [*here*](PowerBudgetExample.xlsx).
+The power budget as a PDF download is available [*here*](Akshan_Bhelkar_Power_Budget.pdf), and a Microsoft Excel Sheet [*here*](Akshan_Bhelkar_Power_Budget.xlsx).
+
