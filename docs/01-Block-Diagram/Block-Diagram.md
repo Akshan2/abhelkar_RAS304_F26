@@ -29,7 +29,7 @@ The power section is divided into separate main and servo 5 V rails. The main LM
 
 ## Subsystem Block Diagram
 
-![Akshan Bhelkar - Servo Motor Block Diagram](Akshan_Block_Diagram.png)
+![Akshan Bhelkar - Servo Motor Block Diagram](AK_BLOCK_DIAGRAM.png)
 
 **Figure:** Current hardware block diagram showing the power distribution, PIC controller, communication interface, OLED display, and servo control connections for the modular spider leg subsystem. This diagram represents the current subsystem design and will be refined from feedback of the external design review.
 
