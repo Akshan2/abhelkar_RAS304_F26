@@ -8,7 +8,7 @@ This schematic is design for the individual subsystem part of the team's Spider 
 
 
 ![schematic](Subsystem.png){style width:"350" height:"300;"}
-**Figure ##:** Schematic of my subsystem of the group project.
+**Figure:** Schematic of my subsystem of the group project.
 
 
 ## Resouces
