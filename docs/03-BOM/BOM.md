@@ -26,7 +26,7 @@ The quantities in the **Order Qty.** column include spare components where appro
 
 ## Power Protection, Connectors, and Debug Hardware
 
-| Component | Reference | Required Qty. | Order Qty. | Unit Cost | Order Total | Manufacturer / Part Number | Source / Status |
+| Component | Reference | Required Qty. | Order Qty. | Unit Cost | Order Total | Manufacturer / Part Number | Source |
 | --- | --- | ---: | ---: | ---: | ---: | --- | --- |
 | PCB-mount barrel jack | J1 | 1 | 0 | $0.00 | $0.00 | Same Sky PJ-102AH | TECH162 stock |
 | 2 A, 5×20 mm fuse | F1 | 1 | 0 | $0.00 | $0.00 | Eaton BK1-S500-2-R | TECH162 stock |
@@ -43,7 +43,7 @@ The quantities in the **Order Qty.** column include spare components where appro
 
 ## Passives and Indicators
 
-| Component and Rating | Reference | Qty. | Purchase Cost | Source / Status |
+| Component and Rating | Reference | Qty. | Purchase Cost | Source |
 | --- | --- | ---: | ---: | --- |
 | 0.33 µF, 50 V capacitor | C1, C5 | 2 | $0.00 | TECH162 capacitor assortment |
 | 0.1 µF, 50 V capacitor | C2, C4, C6, C7 | 4 | $0.00 | TECH162 stock |
@@ -61,7 +61,7 @@ The quantities in the **Order Qty.** column include spare components where appro
 
 The total cost of components that must be purchased is approximately **$46.55 before shipping and tax**.
 
-The PIC development board is already owned. The regulators, power supply, fuses, fuse holders, connectors, capacitors, resistors, LEDs, headers, ribbon cable hardware, and other general components are available from TECH162 stock and therefore add no purchase cost.
+The PIC board is already owned. The regulators, power supply, fuses, fuse holders, connectors, capacitors, resistors, LEDs, headers, ribbon cable hardware, and other general components are available from TECH162 stock and therefore add no purchase cost.
 
 The required purchase requests are:
 
