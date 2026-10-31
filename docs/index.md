@@ -27,6 +27,6 @@ for<br>
 
 * Display status position of servo leg and control it.
 
-To review the details listed of the material used to construct the subsection, you can review it in the ["BOM"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/03-BOM/BOM/) section of the datasheet.
+To review the details listed of the material used to construct the subsection, you can review it in the ["BOM"](https://akshan2.github.io/abhelkar_RAS304_F26/03-BOM/BOM/) section of the datasheet.
 
 For all the sections
