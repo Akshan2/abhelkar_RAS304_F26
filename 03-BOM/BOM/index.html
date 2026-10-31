@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#bill-of-materials" class="md-skip">
           Skip to content
         </a>
       
@@ -614,6 +614,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -656,6 +658,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -675,10 +679,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-table" class="md-nav__link">
+  <a href="#purchase-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bill of Materials Example (as Table)
+        Purchase Summary
       
     </span>
   </a>
@@ -686,10 +690,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-image" class="md-nav__link">
+  <a href="#major-components" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bill of Materials Example (as Image)
+        Major Components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-protection-connectors-and-debug-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Protection, Connectors, and Debug Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passives-and-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passives and Indicators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cost Summary
       
     </span>
   </a>
@@ -904,6 +941,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -923,10 +962,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-table" class="md-nav__link">
+  <a href="#purchase-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bill of Materials Example (as Table)
+        Purchase Summary
       
     </span>
   </a>
@@ -934,10 +973,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bill-of-materials-example-as-image" class="md-nav__link">
+  <a href="#major-components" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bill of Materials Example (as Image)
+        Major Components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-protection-connectors-and-debug-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Protection, Connectors, and Debug Hardware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passives-and-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passives and Indicators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cost Summary
       
     </span>
   </a>
@@ -1017,67 +1089,377 @@
   
 
 
-  <h1>Bill of Materials</h1>
-
+<h1 id="bill-of-materials">Bill of Materials</h1>
 <h2 id="overview">Overview</h2>
-<p>written context</p>
-<h2 id="bill-of-materials-example-as-table">Bill of Materials Example (as Table)</h2>
-<p><em>Table ##: An example of one approach to adding your BOM table to this section.</em></p>
+<p>This bill of materials includes all components required for the servo and OLED control subsystem. Components available from the TECH162 inventory are listed because they are part of the design, but they have a <strong>$0 purchase cost</strong>. The PIC18F57Q43 Curiosity Nano is already owned and also has a $0 additional cost.</p>
+<p>The quantities in the <strong>Order Qty.</strong> column include spare components where appropriate. The OLED and servo are reusable off board modules, so only one of each is requested. Prices are in US dollars.</p>
+<h2 id="purchase-summary">Purchase Summary</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;"><strong>Part Name/Description</strong></th>
-<th style="text-align: left;"><strong>Qty</strong></th>
-<th style="text-align: left;"><strong>Unit Cost</strong></th>
-<th style="text-align: left;"><strong>Total Cost</strong></th>
-<th style="text-align: left;"><strong>Manufacture</strong></th>
-<th style="text-align: left;"><strong>Manufacturer #</strong></th>
-<th style="text-align: left;"><strong>Vendor Link</strong></th>
-<th style="text-align: left;"><strong>Datasheet Link</strong></th>
-<th style="text-align: left;"><strong>Schematic Reference Designators</strong></th>
+<th>Vendor</th>
+<th>Items to Purchase</th>
+<th style="text-align: right;">Subtotal</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">8-bit SIPO/SISO Shift Register, SOIC-16 package</td>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">$0.49</td>
-<td style="text-align: left;">$ 0.49</td>
-<td style="text-align: left;">NXP</td>
-<td style="text-align: left;">74HC595D,112</td>
-<td style="text-align: left;"><a href="https://www.digikey.com/en/products/detail/nexperia-usa-inc/74HC595D-112/763550">DigiKey</a></td>
-<td style="text-align: left;"><a href="https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf">datasheet link</a></td>
-<td style="text-align: left;">U1</td>
+<td>Amazon</td>
+<td>Hosyond 2.42-inch OLED</td>
+<td style="text-align: right;">$15.59</td>
 </tr>
 <tr>
-<td style="text-align: left;">0.1 µF Ceramic Capacitor, +/-10%, X7R, 50V, 0805 package</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">0.2750</td>
-<td style="text-align: left;">$2.75</td>
-<td style="text-align: left;">KEMET</td>
-<td style="text-align: left;">C0805F104K5RACTU</td>
-<td style="text-align: left;">PRLTA 109</td>
-<td style="text-align: left;">n/a</td>
-<td style="text-align: left;">C2, C4, C6, C7, C8, C9, C10, C11, C12, C16</td>
+<td>Hitec</td>
+<td>HS-485HB servo</td>
+<td style="text-align: right;">$28.99</td>
+</tr>
+<tr>
+<td>DigiKey</td>
+<td>Three push buttons and two TO-220 heat sinks</td>
+<td style="text-align: right;">$1.97</td>
+</tr>
+<tr>
+<td><strong>Total Before Shipping and Tax</strong></td>
+<td></td>
+<td style="text-align: right;"><strong>$46.55</strong></td>
 </tr>
 </tbody>
 </table>
-<p>Note: Setting it up as a table is nice because it is completely viewable without scaling issues. <ins>Downside</ins> is that you have to do the math.</p>
+<h2 id="major-components">Major Components</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Reference</th>
+<th style="text-align: right;">Required Qty.</th>
+<th style="text-align: right;">Order Qty.</th>
+<th style="text-align: right;">Unit Cost</th>
+<th style="text-align: right;">Order Total</th>
+<th>Manufacturer</th>
+<th>Part Number</th>
+<th>Source / Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PIC18F57Q43 Curiosity Nano</td>
+<td>U1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>Microchip</td>
+<td>DM164150</td>
+<td>Already owned</td>
+</tr>
+<tr>
+<td>2.42-inch 128×64 I²C OLED, SSD1309</td>
+<td>J3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$15.59</td>
+<td style="text-align: right;">$15.59</td>
+<td>Hosyond</td>
+<td>ASIN B0G2RFLG1L</td>
+<td><a href="https://a.co/d/0i3j9NDr">Amazon</a></td>
+</tr>
+<tr>
+<td>HS-485HB analog servo</td>
+<td>J2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$28.99</td>
+<td style="text-align: right;">$28.99</td>
+<td>Hitec</td>
+<td>33485S</td>
+<td><a href="https://www.hiteccs.com/actuators/product-details/HS-485HB">Hitec</a></td>
+</tr>
+<tr>
+<td>5 V, 1.5 A linear regulator, TO-220</td>
+<td>U2, U3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>Taejin</td>
+<td>LM7805T</td>
+<td>TECH162 stock</td>
+</tr>
+<tr>
+<td>Regulated 9 V, 3 A power supply</td>
+<td>Off-board</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>BestCH</td>
+<td>9V3A power supply</td>
+<td>TECH162 stock</td>
+</tr>
+</tbody>
+</table>
+<h2 id="power-protection-connectors-and-debug-hardware">Power Protection, Connectors, and Debug Hardware</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Reference</th>
+<th style="text-align: right;">Required Qty.</th>
+<th style="text-align: right;">Order Qty.</th>
+<th style="text-align: right;">Unit Cost</th>
+<th style="text-align: right;">Order Total</th>
+<th>Manufacturer / Part Number</th>
+<th>Source / Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCB-mount barrel jack</td>
+<td>J1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>Same Sky PJ-102AH</td>
+<td>TECH162 stock</td>
+</tr>
+<tr>
+<td>2 A, 5×20 mm fuse</td>
+<td>F1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>Eaton BK1-S500-2-R</td>
+<td>TECH162 stock</td>
+</tr>
+<tr>
+<td>1.6 A, 5×20 mm fuse</td>
+<td>F2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>Littelfuse 021701.6MXP</td>
+<td>TECH162 stock</td>
+</tr>
+<tr>
+<td>0.5 A, 5×20 mm fuse</td>
+<td>F4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>Schurter 0034.1513</td>
+<td>TECH162 stock</td>
+</tr>
+<tr>
+<td>PCB fuse holder for 5×20 mm fuse</td>
+<td>F1, F2, F4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>Keystone 4628</td>
+<td>TECH162 stock</td>
+</tr>
+<tr>
+<td>2×4 IDC ribbon-cable header and cable</td>
+<td>J4</td>
+<td style="text-align: right;">1 set</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>2.54 mm IDC hardware</td>
+<td>TECH162 stock</td>
+</tr>
+<tr>
+<td>Breakaway 1×4 male header</td>
+<td>J5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>2.54 mm header strip</td>
+<td>TECH162 stock</td>
+</tr>
+<tr>
+<td>1×2 jumper header and shunt</td>
+<td>JP1</td>
+<td style="text-align: right;">1 set</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>2.54 mm header and shunt</td>
+<td>TECH162 stock</td>
+</tr>
+<tr>
+<td>Female headers for Curiosity Nano</td>
+<td>U1</td>
+<td style="text-align: right;">2 strips</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>2.54 mm female header strips</td>
+<td>TECH162 stock</td>
+</tr>
+<tr>
+<td>SPST-NO through hole tactile switch</td>
+<td>SW1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">$0.19</td>
+<td style="text-align: right;">$0.57</td>
+<td>GCT SWT0325-073016TSK</td>
+<td><a href="https://www.digikey.com/en/products/detail/gct/SWT0325-073016TSK/28022330">DigiKey</a></td>
+</tr>
+<tr>
+<td>TO-220 heat sink</td>
+<td>Mechanical</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">$0.70</td>
+<td style="text-align: right;">$1.40</td>
+<td>Assmann WSW V6560W</td>
+<td><a href="https://www.digikey.com/en/products/detail/assmann-wsw-components/V6560W/3511441">DigiKey</a>; one required and one spare</td>
+</tr>
+<tr>
+<td>PCB test pads</td>
+<td>TP1-TP11</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">$0.00</td>
+<td style="text-align: right;">$0.00</td>
+<td>Plated test-pad footprints</td>
+<td>Made as part of the PCB</td>
+</tr>
+</tbody>
+</table>
+<h2 id="passives-and-indicators">Passives and Indicators</h2>
+<table>
+<thead>
+<tr>
+<th>Component and Rating</th>
+<th>Reference</th>
+<th style="text-align: right;">Qty.</th>
+<th style="text-align: right;">Purchase Cost</th>
+<th>Source / Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.33 µF, 50 V capacitor</td>
+<td>C1, C5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">$0.00</td>
+<td>TECH162 capacitor assortment</td>
+</tr>
+<tr>
+<td>0.1 µF, 50 V capacitor</td>
+<td>C2, C4, C6, C7</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">$0.00</td>
+<td>TECH162 stock</td>
+</tr>
+<tr>
+<td>10 µF, 16 V capacitor</td>
+<td>C3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.00</td>
+<td>TECH162 capacitor assortment</td>
+</tr>
+<tr>
+<td>470 µF, 16 V electrolytic capacitor</td>
+<td>C8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.00</td>
+<td>TECH162 capacitor assortment</td>
+</tr>
+<tr>
+<td>1 µF, 50 V capacitor</td>
+<td>C9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.00</td>
+<td>TECH162 capacitor assortment</td>
+</tr>
+<tr>
+<td>220 Ω, 1/4 W resistor</td>
+<td>R1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.00</td>
+<td>TECH162 resistor kit</td>
+</tr>
+<tr>
+<td>330 Ω, 1/4 W resistor</td>
+<td>R2, R4, R5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">$0.00</td>
+<td>TECH162 resistor kit</td>
+</tr>
+<tr>
+<td>10 kΩ, 1/4 W resistor</td>
+<td>R3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.00</td>
+<td>TECH162 resistor kit</td>
+</tr>
+<tr>
+<td>Blue LED</td>
+<td>D1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.00</td>
+<td>TECH162 LED assortment</td>
+</tr>
+<tr>
+<td>Red LED</td>
+<td>D2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.00</td>
+<td>TECH162 LED assortment</td>
+</tr>
+<tr>
+<td>Yellow LED</td>
+<td>D3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">$0.00</td>
+<td>TECH162 LED assortment</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cost-summary">Cost Summary</h2>
+<p>The total cost of components that must be purchased is approximately <strong>$46.55 before shipping and tax</strong>.</p>
+<p>The PIC development board is already owned. The regulators, power supply, fuses, fuse holders, connectors, capacitors, resistors, LEDs, headers, ribbon cable hardware, and other general components are available from TECH162 stock and therefore add no purchase cost.</p>
+<p>The required purchase requests are:</p>
+<ol>
+<li>
+<p><strong>Amazon</strong></p>
 <ul>
-<li>You could also import your BOM via a screenshot of the spreadsheet created BOM</li>
+<li>One Hosyond 2.42-inch OLED</li>
+<li>Subtotal: <strong>$15.59</strong></li>
 </ul>
-<h2 id="bill-of-materials-example-as-image">Bill of Materials Example (as Image)</h2>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="BOM.png" data-desc-position="bottom"><img _2000_="&quot;2000&quot;" alt="" src="BOM.png" style="style" width:="width:"></a>
-<strong>Figure:</strong> Bill of Materials as a screenshot.</p>
+</li>
+<li>
+<p><strong>Hitec</strong></p>
+<ul>
+<li>One Hitec HS-485HB servo</li>
+<li>Subtotal: <strong>$28.99</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>DigiKey</strong></p>
+<ul>
+<li>Three through-hole push buttons</li>
+<li>Two TO-220 heat sinks</li>
+<li>Subtotal: <strong>$1.97</strong></li>
+</ul>
+</li>
+</ol>
 
 
 
 
 
 
-
-  
-  
 
 
 
