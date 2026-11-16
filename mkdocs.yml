@@ -11,7 +11,7 @@ nav:
   - 03 BOM: 03-BOM/BOM.md
   - 04 Schematic: 04-Schematic/Schematic.md
   - 05 PCB Design: 05-PCB-Design/PCB-Design.md
-  - 06 Power Budget: 06-Power-Budget/Power-Budget.md
+  - 06 Power Budget: 05-Power-Budget/Power-Budget.md
   - Appendix: Appendix/index.md
 theme:
   name: material
