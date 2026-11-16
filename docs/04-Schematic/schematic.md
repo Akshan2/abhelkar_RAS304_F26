@@ -13,4 +13,4 @@ This schematic is design for the individual subsystem part of the team's Spider 
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](Schematic.pdf), and the Zip folder of the project [*here*](Subsystem_Schematic.zip).
+The schematic as a PDF download is available [*here*](Schematic.pdf), and the Zip folder of the KiCad project [*here*](Subsystem_Schematic.zip).
