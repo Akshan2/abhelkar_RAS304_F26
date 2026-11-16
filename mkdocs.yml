@@ -2,6 +2,17 @@ site_name: RAS 304 Data Sheet Template
 site_url: https://ras-embedded-systems.github.io/RAS304DataSheetTemplate/
 repo_url: https://github.com/akshan2/abhelkar_RAS304_F26
 edit_uri: edit/main/docs/
+edit_uri: edit/main/docs/
+
+nav:
+  - Welcome: index.md
+  - 01 Block Diagram: 01-Block-Diagram/Block-Diagram.md
+  - 02 Component Selection: 02-Component-Selection/Component-Selection.md
+  - 03 BOM: 03-BOM/BOM.md
+  - 04 Schematic: 04-Schematic/Schematic.md
+  - 05 PCB Design: 05-PCB-Design/PCB-Design.md
+  - 06 Power Budget: 06-Power-Budget/Power-Budget.md
+  - Appendix: Appendix/index.md
 theme:
   name: material
   custom_dir: custom_theme/
